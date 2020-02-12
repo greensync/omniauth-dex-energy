@@ -2,7 +2,8 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'omniauth/strategies/dex-energy'
+require 'omniauth/strategies/dex_energy'
 
-require 'pry'
+require 'pry-byebug'
+
 Pry.start
