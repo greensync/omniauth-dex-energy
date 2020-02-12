@@ -1,0 +1,59 @@
+require: rubocop-rspec
+
+AllCops:
+  CacheRootDirectory: .cache
+  TargetRubyVersion: 2.5
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+Layout/LineLength:
+  Enabled: true
+  Max: 140
+  IgnoredPatterns:
+    # Ignore line length of comment-only lines:
+    - '(\A\s*)#'
+  Exclude:
+    - 'spec/**/*'
+Metrics/AbcSize:
+  Max: 25
+Metrics/BlockLength:
+  Exclude:
+    - 'omniauth-dex-energy.gemspec'
+    - 'spec/**/*'
+Metrics/ClassLength:
+  Max: 150
+Metrics/CyclomaticComplexity:
+  Max: 15
+Metrics/MethodLength:
+  Max: 15
+RSpec/ExpectChange:
+  EnforcedStyle: block
+RSpec/ImplicitSubject:
+  Enabled: false
+RSpec/MessageChain:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Max: 4
+RSpec/NestedGroups:
+  Max: 7
+Style/Documentation:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+Style/FormatString:
+  EnforcedStyle: percent
+Style/FormatStringToken:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/NumericPredicate:
+  Enabled: false
