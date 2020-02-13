@@ -5,9 +5,7 @@ Gem::Specification.new do |spec|
   spec.version       = '0.1.0'
   spec.authors       = ['Cera Davies', 'Nick Burgin', 'Mike Williams']
   spec.email         = [
-    'ceralena.davies@gmail.com',
-    'nick.burgin@greensync.com.au',
-    'mike.williams@greensync.com.au',
+    'internalplatform@greensync.com.au',
   ]
 
   spec.summary       = 'an OmniAuth strategy for authenticating with deX'
