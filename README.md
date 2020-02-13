@@ -1,5 +1,7 @@
 # omniauth-dex-energy
 
+![CI](https://github.com/greensync/omniauth-dex-energy/workflows/CI/badge.svg)
+
 An OmniAuth strategy to authenticate with deX.
 
 ## Table of Contents
