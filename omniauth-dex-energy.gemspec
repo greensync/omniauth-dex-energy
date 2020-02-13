@@ -27,7 +27,7 @@ Gem::Specification.new do |spec|
   spec.metadata['source_code_uri'] = spec.homepage
   spec.metadata['changelog_uri'] = "#{spec.homepage}/releases"
 
-  spec.add_dependency 'omniauth-oauth2', '~> 1.6.0'
+  spec.add_dependency 'omniauth-oauth2', '~> 1.6'
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'pry-byebug', '~> 3.8.0'
