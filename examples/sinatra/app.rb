@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'omniauth/strategies/dex_energy'
 require 'sinatra'
 require 'slim'
