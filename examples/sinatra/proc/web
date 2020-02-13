@@ -1,0 +1,4 @@
+#! /bin/bash -eu
+
+cd $(dirname $0)/..
+exec bundle exec puma --port ${PORT:-5000}
