@@ -8,7 +8,8 @@ module OmniAuth
     class DexEnergy < OmniAuth::Strategies::OAuth2
       option :name, 'dex_energy'
 
-      option :client_options, auth_scheme: :basic_auth
+      option :client_options, site: 'https://who.dex.energy', auth_scheme: :basic_auth
+      # option :client_options, auth_scheme: :basic_auth
 
       uid do
         raw_info['sub']

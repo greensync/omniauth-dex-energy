@@ -10,10 +10,7 @@ oauth2_client_secret = ENV['OAUTH2_CLIENT_SECRET']
 use Rack::Session::Cookie
 
 use OmniAuth::Builder do
-  provider :dex_energy, oauth2_client_id, oauth2_client_secret,
-           client_options: {
-             site: 'https://who.dex.energy',
-           }
+  provider :dex_energy, oauth2_client_id, oauth2_client_secret
 end
 
 get '/' do
