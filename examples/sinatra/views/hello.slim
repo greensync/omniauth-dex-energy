@@ -1,0 +1,8 @@
+p Hello, #{@user || 'stranger'}!
+
+ul
+  li
+    - if @user
+      a href="/logout" Log out
+    - else
+      a href="/login" Log in

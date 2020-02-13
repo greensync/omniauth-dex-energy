@@ -2,6 +2,18 @@
 
 An OmniAuth strategy to authenticate with deX.
 
+## Table of Contents
+
+- [omniauth-dex-energy](#omniauth-dex-energy)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [First Steps](#first-steps)
+    - [Sinatra](#sinatra)
+  - [Development](#development)
+  - [Contributing](#contributing)
+  - [License](#license)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -20,7 +32,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### First Steps
+
+Regardless of your web framework, you will need to provision an OAuth2 Client in the IdP through the [GreenSync Platform Team](mailto:internalplatform@greensync.com.au). You'll be provided with a Client ID and Client Secret that can be used to configure this gem.
+
+Contact the [GreenSync Platform Team].
+
+### Sinatra
+
+See [`examples/sinatra/app.rb`](examples/sinatra/app.rb) for example usage.
+
+To run the example application:
+
+```bash
+export OAUTH2_CLIENT_ID='my-client-id'
+export OAUTH2_CLIENT_SECRET='my-client-secret'
+
+cd examples/sinatra
+bundle install
+bundle exec foreman start
+```
 
 ## Development
 
