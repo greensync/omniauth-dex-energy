@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+gem_version = `git describe --exact-match HEAD`.strip
+
 Gem::Specification.new do |spec|
   spec.name          = 'omniauth-dex-energy'
-  spec.version       = File.read('VERSION').strip
+  spec.version       = gem_version
   spec.authors       = ['Cera Davies', 'Nick Burgin', 'Mike Williams']
   spec.email         = [
     'internalplatform@greensync.com.au',

@@ -2,9 +2,7 @@
 
 set -Eeuo pipefail
 
-set -x
-
-version=$(cat $(dirname $0)/../VERSION)
+version=$(git describe --exact-match HEAD)
 
 gem build omniauth-dex-energy
 gem push omniauth-dex-energy-${version}.gem
