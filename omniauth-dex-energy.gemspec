@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'omniauth-dex-energy'
-  spec.version       = '0.1.0'
+  spec.version       = File.read('VERSION').strip
   spec.authors       = ['Cera Davies', 'Nick Burgin', 'Mike Williams']
   spec.email         = [
     'internalplatform@greensync.com.au',

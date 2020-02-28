@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -Eeuo pipefail
+
+set -x
+
+version=$(cat $(dirname $0)/../VERSION)
+
+gem build omniauth-dex-energy
+gem push omniauth-dex-energy-${version}.gem
