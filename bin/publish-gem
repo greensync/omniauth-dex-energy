@@ -4,5 +4,6 @@ set -Eeuo pipefail
 
 version=$(git describe --exact-match HEAD)
 
+git push origin ${version}
 gem build omniauth-dex-energy
 gem push omniauth-dex-energy-${version}.gem
