@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'pry-byebug', '~> 3.8.0'
-  spec.add_development_dependency 'rack'
+  spec.add_development_dependency 'rack', '~> 1.6.0'
   spec.add_development_dependency 'rake', '~> 12.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rubocop', '~> 0.77'
