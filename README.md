@@ -1,6 +1,7 @@
 # omniauth-dex-energy
 
 ![CI](https://github.com/greensync/omniauth-dex-energy/workflows/CI/badge.svg)
+[![Gem Version](https://badge.fury.io/rb/omniauth-dex-energy.png)](https://badge.fury.io/rb/omniauth-dex-energy)
 
 An OmniAuth strategy to authenticate with deX.
 
@@ -26,11 +27,15 @@ gem 'omniauth-dex-energy'
 
 And then execute:
 
-    $ bundle install
+```sh
+bundle install
+```
 
 Or install it yourself as:
 
-    $ gem install omniauth-dex-energy
+```sh
+gem install omniauth-dex-energy
+```
 
 ## Usage
 
