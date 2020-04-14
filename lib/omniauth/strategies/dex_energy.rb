@@ -10,6 +10,8 @@ module OmniAuth
 
       option :client_options, site: 'https://who.dex.energy', auth_scheme: :basic_auth
 
+      option :authorize_params, scope: 'openid'
+
       uid do
         raw_info['sub']
       end
