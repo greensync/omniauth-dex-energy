@@ -41,7 +41,7 @@ GEM
     pry-byebug (3.8.0)
       byebug (~> 11.0)
       pry (~> 0.10)
-    rack (2.2.2)
+    rack (2.2.3)
     rainbow (3.0.0)
     rake (12.3.3)
     rspec (3.9.0)
@@ -76,7 +76,7 @@ DEPENDENCIES
   bundler (~> 2.0)
   omniauth-dex-energy!
   pry-byebug (~> 3.8.0)
-  rack
+  rack (~> 2.2.3)
   rake (~> 12.0)
   rspec (~> 3.0)
   rubocop (~> 0.77)
