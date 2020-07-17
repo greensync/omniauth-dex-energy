@@ -6,9 +6,11 @@ require 'omniauth-oauth2'
 module OmniAuth
   module Strategies
     class DexEnergy < OmniAuth::Strategies::OAuth2
+      DEFAULT_SITE = 'https://who.dex.energy'
+
       option :name, 'dex_energy'
 
-      option :client_options, site: 'https://who.dex.energy', auth_scheme: :basic_auth
+      option :client_options, site: DEFAULT_SITE, auth_scheme: :basic_auth
 
       option :authorize_params, scope: 'openid'
 
@@ -26,6 +28,16 @@ module OmniAuth
         {
           'raw_info' => raw_info,
         }
+      end
+
+      class << self
+        def logout_uri(client_id:, redirect_uri:, site: nil)
+          site ||= DEFAULT_SITE
+
+          encoded_redirect_uri = URI.encode_www_form_component(redirect_uri)
+
+          "#{site}/oauth/logout?client_id=#{client_id}&redirect_uri=#{encoded_redirect_uri}"
+        end
       end
 
       private
