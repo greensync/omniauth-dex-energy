@@ -38,7 +38,7 @@ get '/logout' do
 
   logout_url = OmniAuth::Strategies::DexEnergy.logout_uri(
     client_id: oauth2_client_id,
-    redirect_uri: to('/')
+    redirect_uri: to('/'),
   )
   redirect logout_url
 end
