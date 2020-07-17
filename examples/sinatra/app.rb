@@ -31,7 +31,14 @@ get '/auth/dex_energy/callback' do
 end
 
 get '/logout' do
-  # Log the user out of their session in the app - but not in the Identity Provider.
+  # Log the user out of their session in the app, and then redirect them to the IdP
+  # so that it can log them out.
+  # The user will be redirect back to us afterwards.
   session.delete(:user)
-  redirect request.referrer
+
+  logout_url = OmniAuth::Strategies::DexEnergy.logout_uri(
+    client_id: oauth2_client_id,
+    redirect_uri: to('/'),
+  )
+  redirect logout_url
 end
