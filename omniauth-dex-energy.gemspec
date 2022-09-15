@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-gem_version = `git describe --exact-match HEAD`.strip
+gem_version = `git describe --tags --abbrev=0`.strip
 
 Gem::Specification.new do |spec|
   spec.name          = 'omniauth-dex-energy'
