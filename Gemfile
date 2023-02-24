@@ -6,4 +6,4 @@ source 'https://rubygems.org'
 gemspec
 
 # See https://github.com/greensync/who/issues/243
-gem 'omniauth', '< 2.0'
+gem 'omniauth', '< 3.0'
