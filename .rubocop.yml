@@ -1,8 +1,11 @@
-require: rubocop-rspec
+plugins:
+  - rubocop-rake
+  - rubocop-rspec
 
 AllCops:
   CacheRootDirectory: .cache
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 3.1
+  NewCops: enable
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
 Layout/FirstArrayElementIndentation:
@@ -12,7 +15,7 @@ Layout/MultilineMethodCallIndentation:
 Layout/LineLength:
   Enabled: true
   Max: 140
-  IgnoredPatterns:
+  AllowedPatterns:
     # Ignore line length of comment-only lines:
     - '(\A\s*)#'
   Exclude:
@@ -39,7 +42,7 @@ RSpec/MultipleExpectations:
   Max: 4
 RSpec/NestedGroups:
   Max: 7
-RSpec/FilePath:
+RSpec/SpecFilePathFormat:
   CustomTransform:
     OmniAuth: omniauth
 Style/Documentation:
@@ -59,4 +62,6 @@ Style/FormatStringToken:
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/NumericPredicate:
+  Enabled: false
+Style/FetchEnvVar:
   Enabled: false
