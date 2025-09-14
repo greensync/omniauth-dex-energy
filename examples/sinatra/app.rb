@@ -8,6 +8,7 @@ oauth2_client_id = ENV['OAUTH2_CLIENT_ID']
 oauth2_client_secret = ENV['OAUTH2_CLIENT_SECRET']
 
 use Rack::Session::Cookie
+use Rack::Protection::AuthenticityToken
 
 use OmniAuth::Builder do
   provider :dex_energy, oauth2_client_id, oauth2_client_secret
@@ -19,8 +20,7 @@ get '/' do
 end
 
 get '/login' do
-  # Redirect the user to the endpoint provided by OmniAuth.
-  redirect to("/auth/dex_energy?origin=#{URI.encode_www_form_component(request.referrer)}")
+  slim :login
 end
 
 get '/auth/dex_energy/callback' do

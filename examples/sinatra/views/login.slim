@@ -1,0 +1,6 @@
+p Click the button below to login
+
+form action="/auth/dex_energy" method="post"
+  input type="hidden" name="authenticity_token" value="#{session[:csrf]}"
+  input type="hidden" name="origin" value="#{request.referrer}"
+  input type="submit" value="Login"
