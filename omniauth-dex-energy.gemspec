@@ -3,6 +3,7 @@
 gem_version = `git describe --tags --abbrev=0`.strip
 
 Gem::Specification.new do |spec|
+  spec.required_ruby_version = '>= 3.1'
   spec.name          = 'omniauth-dex-energy'
   spec.version       = gem_version
   spec.authors       = ['Cera Davies', 'Nick Burgin', 'Mike Williams']
@@ -28,14 +29,7 @@ Gem::Specification.new do |spec|
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = spec.homepage
   spec.metadata['changelog_uri'] = "#{spec.homepage}/releases"
+  spec.metadata['rubygems_mfa_required'] = 'true'
 
-  spec.add_dependency 'omniauth-oauth2', '~> 1.6'
-
-  spec.add_development_dependency 'bundler', '~> 2.0'
-  spec.add_development_dependency 'pry-byebug', '~> 3.8.0'
-  spec.add_development_dependency 'rack', '~> 2.2.3'
-  spec.add_development_dependency 'rake', '~> 12.0'
-  spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rubocop', '~> 0.77'
-  spec.add_development_dependency 'rubocop-rspec', '~> 1.37.0'
+  spec.add_dependency 'omniauth-oauth2', '~> 1.8'
 end
