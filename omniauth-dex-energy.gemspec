@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-gem_version = `git describe --tags --abbrev=0`.strip
+gem_version = `git describe --tags --abbrev=0`.strip.sub(/^v/, '')
 
 Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 3.1'
