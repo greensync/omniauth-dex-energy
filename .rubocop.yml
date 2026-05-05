@@ -4,7 +4,7 @@ plugins:
 
 AllCops:
   CacheRootDirectory: .cache
-  TargetRubyVersion: 3.1
+  TargetRubyVersion: 3.3
   NewCops: enable
 Layout/EmptyLineAfterGuardClause:
   Enabled: false
