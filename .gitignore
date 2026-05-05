@@ -10,3 +10,5 @@
 /spec/reports/
 /tmp/
 /.idea/
+/vendor
+.DS_Store
