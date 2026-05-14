@@ -3,7 +3,7 @@
 gem_version = `git describe --tags --abbrev=0`.strip.sub(/^v/, '')
 
 Gem::Specification.new do |spec|
-  spec.required_ruby_version = '>= 3.1'
+  spec.required_ruby_version = '>= 3.3'
   spec.name          = 'omniauth-dex-energy'
   spec.version       = gem_version
   spec.authors       = ['Cera Davies', 'Nick Burgin', 'Mike Williams']
